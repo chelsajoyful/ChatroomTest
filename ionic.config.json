@@ -1,0 +1,8 @@
+{
+  "name": "ChatroomTest",
+  "app_id": "c7214805",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
