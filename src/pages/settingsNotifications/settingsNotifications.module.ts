@@ -2,18 +2,18 @@ import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { IonicPageModule } from 'ionic-angular';
 
-import { ContentPage } from './content';
+import { SettingsNotificationsPage } from './settingsNotifications';
 
 @NgModule({
   declarations: [
-    ContentPage,
+    SettingsNotificationsPage,
   ],
   imports: [
-    IonicPageModule.forChild(ContentPage),
+    IonicPageModule.forChild(SettingsNotificationsPage),
     TranslateModule.forChild()
   ],
   exports: [
-    ContentPage
+    SettingsNotificationsPage
   ]
 })
-export class ContentPageModule { }
+export class SettingsNotificationsPageModule { }

@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ 'ITEM_CREATE_TITLE' | translate }}</ion-title>
+    <ion-title>Edit Profile</ion-title>
     <ion-buttons start>
       <button ion-button (click)="cancel()">
         <span color="primary" showWhen="ios">
@@ -39,9 +39,29 @@
       <ion-item>
         <ion-input type="text" placeholder="{{ 'ITEM_NAME_PLACEHOLDER' | translate }}" formControlName="name"></ion-input>
       </ion-item>
+
       <ion-item>
-        <ion-input type="text" placeholder="{{ 'ITEM_ABOUT_PLACEHOLDER' | translate }}" formControlName="about"></ion-input>
+        <ion-label>User</ion-label>
+        <ion-select formControlName="user">
+          <ion-option value="donor_mother">Donor Mother</ion-option>
+          <ion-option value="breastfeeding_expert">Breastfeeding Expert</ion-option>
+          <ion-option value="duala">Duala</ion-option>
+          <ion-option value="lactation_specialist">Lactation Specialist</ion-option>
+          <ion-option value="milk_matters">Milk Matters</ion-option>
+        </ion-select>
       </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="Donor Number" formControlName="donor_number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="Tell us a bit about yourself ..." formControlName="about"></ion-input>
+      </ion-item>
+
     </ion-list>
   </form>
+  <button ion-button (click)="navigateToOtherPage()">Autofill Biography</button>
 </ion-content>
+
+

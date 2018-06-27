@@ -3,10 +3,10 @@ import { IonicPage, NavController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-content',
-  templateUrl: 'content.html'
+  selector: 'page-writePost',
+  templateUrl: 'writePost.html'
 })
-export class ContentPage {
+export class WritePostPage {
 
   constructor(public navCtrl: NavController) { }
 

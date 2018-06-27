@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { Settings } from '../../providers';
 
@@ -12,19 +12,16 @@ import { Settings } from '../../providers';
  */
 @IonicPage()
 @Component({
-  selector: 'page-settings',
-  templateUrl: 'settings.html'
+  selector: 'page-settingsStarred',
+  templateUrl: 'settingsStarred.html'
 })
-export class SettingsPage {
+export class SettingsStarredPage {
   // Our local settings object
   options: any;
 
   settingsReady = false;
 
   form: FormGroup;
-
-  pet: string = "puppies";
-  isAndroid: boolean = false;
 
   profileSettings = {
     page: 'profile',
@@ -35,7 +32,7 @@ export class SettingsPage {
   pageTitleKey: string = 'SETTINGS_TITLE';
   pageTitle: string;
 
-  subSettings: any = SettingsPage;
+  subSettings: any = SettingsStarredPage;
 
   constructor(public navCtrl: NavController,
     public settings: Settings,
@@ -47,8 +44,6 @@ export class SettingsPage {
   _buildForm() {
     let group: any = {
       option1: [this.options.option1],
-      option2: [this.options.option2],
-      option3: [this.options.option3]
     };
     
     this.form = this.formBuilder.group(group);

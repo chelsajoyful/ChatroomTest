@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Camera } from '@ionic-native/camera';
 import { IonicPage, NavController, ViewController } from 'ionic-angular';
+import { AutofillPage } from '../../pages';
 
 @IonicPage()
 @Component({
@@ -21,7 +22,9 @@ export class ItemCreatePage {
     this.form = formBuilder.group({
       profilePic: [''],
       name: ['', Validators.required],
-      about: ['']
+      user: ['', Validators.required],
+      about: [''],
+      donor_number: ['']
     });
 
     // Watch the form for changes, and
@@ -72,6 +75,10 @@ export class ItemCreatePage {
     this.viewCtrl.dismiss();
   }
 
+  navigateToOtherPage(): void {
+   this.navCtrl.push(AutofillPage);
+  }
+
   /**
    * The user is done and wants to create the item, so return it
    * back to the presenter.
@@ -80,4 +87,8 @@ export class ItemCreatePage {
     if (!this.form.valid) { return; }
     this.viewCtrl.dismiss(this.form.value);
   }
+
+  /*stpSelect() {
+    console.log('STP selected');
+  }*/
 }

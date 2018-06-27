@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ pageTitle }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="form" *ngIf="settingsReady">
+    <ion-list *ngIf="page == 'main'">
+      <ion-item>
+        <ion-label text-wrap>Notify me about likes, comments and tags on my starred posts</ion-label>
+        <ion-toggle formControlName="option1"></ion-toggle>
+      </ion-item>
+
+    </ion-list>
+
+  </form>
+
+</ion-content>
